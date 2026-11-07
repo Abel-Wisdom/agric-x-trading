@@ -1,0 +1,157 @@
+
+/* ============================
+   NAVBAR
+============================ */
+
+.site-header {
+  height: 84px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e9ede8;
+  backdrop-filter: blur(16px);
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: white;
+  background: var(--green-dark);
+}
+
+.brand-name {
+  color: var(--green-dark);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.brand-name strong {
+  color: var(--gold);
+}
+
+.brand-name small {
+  display: block;
+  margin-top: 5px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links > a {
+  color: #48564b;
+  font-size: 0.79rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links > a:hover,
+.nav-links > a.active {
+  color: var(--green);
+}
+
+.nav-links .nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 17px;
+  color: white;
+  background: var(--green-dark);
+  border-radius: 5px;
+}
+
+.nav-links .nav-cta:hover {
+  color: white;
+  background: var(--green);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--green-dark);
+}
+
+/* ============================
+   NAVBAR RESPONSIVENESS
+============================ */
+
+@media (max-width: 1050px) {
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links > a {
+    font-size: 0.73rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .site-header {
+    height: 72px;
+  }
+
+  .mobile-menu-toggle {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 22px 22px;
+    background: white;
+    border-bottom: 1px solid #e9ede8;
+    box-shadow: 0 15px 25px rgba(20, 45, 28, 0.08);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links > a {
+    padding: 15px 0;
+    font-size: 0.87rem;
+    border-bottom: 1px solid #edf0eb;
+  }
+
+  .nav-links .nav-cta {
+    justify-content: center;
+    margin-top: 14px;
+    padding: 15px;
+  }
+}

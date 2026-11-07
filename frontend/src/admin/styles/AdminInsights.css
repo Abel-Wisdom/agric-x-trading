@@ -1,0 +1,479 @@
+
+/* ========================================
+   VNS 1: PAGE LAYOUT
+======================================== */
+.admin-insights-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: #18372b;
+}
+
+.admin-insights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.admin-page-eyebrow {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #a98535;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.admin-insights-header h1 {
+  margin: 0;
+  color: #18372b;
+  font-size: clamp(25px, 3vw, 32px);
+  font-weight: 750;
+}
+
+.admin-insights-header p,
+.admin-insights-form-heading p,
+.admin-insights-list-heading p {
+  margin: 8px 0 0;
+  color: #78877e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   VNS 2: HEADER ACTION BUTTONS
+======================================== */
+.admin-insights-header-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.admin-insights-add-btn,
+.admin-insights-video-add-btn,
+.admin-insights-empty button {
+  border: 0;
+  border-radius: 8px;
+  padding: 13px 18px;
+  background: #1d6042;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-insights-add-btn:hover,
+.admin-insights-empty button:hover {
+  background: #154b33;
+}
+
+.admin-insights-video-add-btn {
+  background: #a98535;
+}
+
+.admin-insights-video-add-btn:hover {
+  background: #896b29;
+}
+
+/* ========================================
+   VNS 3: FORM AND LIST CONTAINERS
+======================================== */
+.admin-insights-form-card,
+.admin-insights-list-card {
+  margin-bottom: 25px;
+  padding: 25px;
+  border: 1px solid #e8ede8;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgb(20 55 37 / 4%);
+}
+
+.admin-insights-form-heading {
+  margin-bottom: 25px;
+}
+
+.admin-insights-form-heading h2,
+.admin-insights-list-heading h2 {
+  margin: 0;
+  color: #1b3c2d;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+/* ========================================
+   VNS 4: FORM FIELDS
+======================================== */
+.admin-insights-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.admin-insights-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.admin-insights-full {
+  grid-column: 1 / -1;
+}
+
+.admin-insights-field label {
+  color: #344b3d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-insights-field input,
+.admin-insights-field select,
+.admin-insights-field textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #dce5dd;
+  border-radius: 8px;
+  outline: none;
+  padding: 12px 13px;
+  background: #fbfcfa;
+  color: #263b30;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-insights-field input:focus,
+.admin-insights-field select:focus,
+.admin-insights-field textarea:focus {
+  border-color: #39835d;
+  box-shadow: 0 0 0 3px rgb(57 131 93 / 10%);
+}
+
+.admin-insights-field textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.admin-insights-field input[type="file"] {
+  padding: 10px;
+  background: #fff;
+}
+
+.admin-insights-field small {
+  color: #87948b;
+  font-size: 11px;
+}
+
+/* ========================================
+   VNS 5: VIDEO PREVIEWS
+======================================== */
+.admin-video-preview {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  max-height: 280px;
+  margin-top: 8px;
+  border-radius: 9px;
+  background: #10251a;
+  object-fit: contain;
+}
+
+.admin-video-thumbnail-preview {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  max-height: 200px;
+  margin-top: 8px;
+  border-radius: 9px;
+  object-fit: cover;
+}
+
+.admin-video-remove-thumbnail {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 7px;
+  color: #a13d32 !important;
+  font-size: 12px !important;
+  cursor: pointer;
+}
+
+.admin-video-remove-thumbnail input {
+  width: auto;
+}
+
+/* ========================================
+   VNS 6: FORM NOTICE AND ACTIONS
+======================================== */
+.admin-insights-form-notice {
+  margin-top: 24px;
+  border: 1px solid #eee5cc;
+  border-radius: 8px;
+  padding: 13px 15px;
+  background: #fcf9f0;
+  color: #80672f;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.admin-video-error {
+  border-color: #f0d9d6;
+  background: #fff1ef;
+  color: #a13d32;
+}
+
+.admin-insights-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.admin-insights-cancel-btn,
+.admin-insights-save-btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 19px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-insights-cancel-btn {
+  background: #eef2ee;
+  color: #405448;
+  cursor: pointer;
+}
+
+.admin-insights-save-btn {
+  background: #1d6042;
+  color: #fff;
+  cursor: pointer;
+}
+
+.admin-insights-save-btn:disabled,
+.admin-insights-cancel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   VNS 7: LIST HEADINGS AND COUNTS
+======================================== */
+.admin-insights-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edf0ed;
+}
+
+.admin-insights-count {
+  border-radius: 20px;
+  padding: 7px 12px;
+  background: #edf5ef;
+  color: #286342;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========================================
+   VNS 8: CONTENT MANAGEMENT LISTS
+======================================== */
+.admin-insights-content-list {
+  display: grid;
+  gap: 15px;
+  padding-top: 22px;
+}
+
+.admin-insights-content-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 15px;
+  border: 1px solid #e8ede8;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.admin-insights-item-image,
+.admin-insights-video-placeholder {
+  flex: 0 0 105px;
+  width: 105px;
+  height: 85px;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.admin-insights-video-placeholder {
+  display: grid;
+  place-items: center;
+  background: #edf5ef;
+  color: #286342;
+  font-size: 25px;
+}
+
+.admin-insights-item-details {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.admin-insights-item-details h3 {
+  margin: 0 0 7px;
+  color: #1b3c2d;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.admin-insights-item-details p {
+  margin: 0 0 7px;
+  color: #78877e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.admin-insights-item-details small {
+  color: #829087;
+  font-size: 11px;
+}
+
+.admin-insights-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.admin-insights-item-actions button {
+  padding: 8px 12px;
+  border: 1px solid #dce5dd;
+  border-radius: 6px;
+  background: #f8faf8;
+  color: #1d6042;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-insights-item-actions button:hover {
+  background: #edf5ef;
+}
+
+.admin-insights-item-actions .admin-insights-delete-btn {
+  border-color: #f0d9d6;
+  background: #fff6f5;
+  color: #a13d32;
+}
+
+.admin-insights-item-actions .admin-insights-delete-btn:hover {
+  background: #ffedeb;
+}
+
+.admin-insights-item-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   VNS 9: EMPTY STATES
+======================================== */
+.admin-insights-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 55px 20px 45px;
+  text-align: center;
+}
+
+.admin-insights-empty-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  margin-bottom: 17px;
+  border-radius: 50%;
+  background: #edf5ef;
+  color: #286342;
+  font-size: 26px;
+}
+
+.admin-insights-empty h3 {
+  margin: 0;
+  color: #294536;
+  font-size: 17px;
+}
+
+.admin-insights-empty p {
+  max-width: 430px;
+  margin: 9px 0 20px;
+  color: #829087;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.admin-insights-empty button {
+  padding: 11px 16px;
+}
+
+/* ========================================
+   VNS 10: RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 700px) {
+  .admin-insights-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-insights-header-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-insights-add-btn,
+  .admin-insights-video-add-btn {
+    width: 100%;
+  }
+
+  .admin-insights-form-card,
+  .admin-insights-list-card {
+    padding: 18px;
+  }
+
+  .admin-insights-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-insights-full {
+    grid-column: auto;
+  }
+
+  .admin-insights-list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-insights-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .admin-insights-cancel-btn,
+  .admin-insights-save-btn {
+    width: 100%;
+  }
+
+  .admin-insights-content-item {
+    align-items: flex-start;
+  }
+
+  .admin-insights-item-actions {
+    width: 100%;
+  }
+}

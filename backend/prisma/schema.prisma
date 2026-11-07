@@ -1,0 +1,170 @@
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// VNS 1: ADMIN ACCOUNT
+model Admin {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String   @unique
+  passwordHash String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// VNS 2: RESEARCH REPORTS
+model ResearchReport {
+  id              Int       @id @default(autoincrement())
+  title           String
+  slug            String    @unique
+  category        String
+  location        String?
+  publicationDate DateTime?
+  description     String    @db.Text
+  content         String    @db.Text
+  status          String    @default("Draft")
+
+  coverMediaId Int?
+  pdfMediaId   Int?
+
+  coverMedia MediaAsset? @relation("ResearchCover", fields: [coverMediaId], references: [id], onDelete: SetNull)
+  pdfMedia   MediaAsset? @relation("ResearchPDF", fields: [pdfMediaId], references: [id], onDelete: SetNull)
+
+  researchMedia ResearchMedia[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// VNS 3: RESEARCH MEDIA RELATIONSHIPS
+model ResearchMedia {
+  id               Int      @id @default(autoincrement())
+  researchReportId Int
+  mediaAssetId     Int
+  mediaType        String
+  caption          String?  @db.Text
+  sortOrder        Int      @default(0)
+
+  researchReport ResearchReport @relation(fields: [researchReportId], references: [id], onDelete: Cascade)
+  mediaAsset     MediaAsset     @relation(fields: [mediaAssetId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([researchReportId, mediaAssetId])
+  @@index([researchReportId, sortOrder])
+}
+
+// VNS 4: INSIGHTS AND ARTICLES
+model Article {
+  id              Int       @id @default(autoincrement())
+  title           String
+  slug            String    @unique
+  category        String
+  author          String
+  publicationDate DateTime?
+  excerpt         String    @db.Text
+  content         String    @db.Text
+  status          String    @default("Draft")
+
+  coverMediaId Int?
+  coverMedia   MediaAsset? @relation("ArticleCover", fields: [coverMediaId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// VNS 4A: STANDALONE VIDEO CONTENT
+model Video {
+  id              Int       @id @default(autoincrement())
+  title           String
+  slug            String    @unique
+  presenter       String?
+  publicationDate DateTime?
+  description     String    @db.Text
+  status          String    @default("Draft")
+
+  // The actual uploaded video file
+  videoMediaId Int
+  videoMedia   MediaAsset @relation("VideoFile", fields: [videoMediaId], references: [id], onDelete: Restrict)
+
+  // Optional video thumbnail
+  thumbnailMediaId Int?
+  thumbnailMedia   MediaAsset? @relation("VideoThumbnail", fields: [thumbnailMediaId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status, publicationDate])
+}
+
+// VNS 5: AGRICULTURAL SERVICES
+model Service {
+  id               Int    @id @default(autoincrement())
+  title            String
+  category         String
+  shortDescription String @db.Text
+  description      String @db.Text
+  status           String @default("Draft")
+
+  coverMediaId Int?
+  coverMedia   MediaAsset? @relation("ServiceCover", fields: [coverMediaId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// VNS 6: MEDIA LIBRARY
+model MediaAsset {
+  id           Int     @id @default(autoincrement())
+  originalName String
+  filename     String
+  mimeType     String
+  size         Int
+  url          String
+  storageKey   String?
+  altText      String?
+
+  researchCovers ResearchReport[] @relation("ResearchCover")
+  researchPDFs   ResearchReport[] @relation("ResearchPDF")
+  researchMedia  ResearchMedia[]
+
+  articleCovers Article[] @relation("ArticleCover")
+
+  videoFiles      Video[] @relation("VideoFile")
+  videoThumbnails Video[] @relation("VideoThumbnail")
+
+  serviceCovers Service[] @relation("ServiceCover")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// VNS 7: CONTACT MESSAGES
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  subject   String
+  message   String   @db.Text
+  status    String   @default("Unread")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// VNS 8: WEBSITE SETTINGS
+model SiteSettings {
+  id          Int      @id @default(1)
+  companyName String   @default("Agric X Trading")
+  email       String?
+  phone       String?
+  address     String?
+  aboutText   String?  @db.Text
+  updatedAt   DateTime @updatedAt
+}

@@ -1,0 +1,413 @@
+
+/* ========================================
+   VNS 1: SERVICES PAGE
+======================================== */
+.admin-services-page {
+  width: 100%;
+}
+
+/* ========================================
+   VNS 2: STATISTICS CARDS
+======================================== */
+.admin-service-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.admin-service-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 95px;
+  padding: 18px;
+  border: 1px solid #e5ebe3;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.admin-service-stat-icon {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #edf3eb;
+  color: #286340;
+  font-size: 22px;
+}
+
+.admin-service-stat-icon.published {
+  background: #eaf4ed;
+  color: #247347;
+}
+
+.admin-service-stat-icon.draft {
+  background: #f8f3e8;
+  color: #a17a32;
+}
+
+.admin-service-stat-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-service-stat-card div span {
+  color: #879188;
+  font-size: 11px;
+}
+
+.admin-service-stat-card strong {
+  color: #24432e;
+  font-family: "Manrope", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+/* ========================================
+   VNS 3: SERVICE FORM
+======================================== */
+.admin-service-form {
+  margin-bottom: 25px;
+}
+
+.admin-service-form .admin-panel-heading {
+  margin-bottom: 22px;
+}
+
+.admin-service-form .admin-panel-heading h3,
+.admin-services-list-heading h3 {
+  margin: 0 0 7px;
+  color: #294832;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.admin-service-form .admin-panel-heading p,
+.admin-services-list-heading p {
+  margin: 0;
+  color: #929b92;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.admin-service-form .admin-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-service-form .admin-form-group label {
+  color: #405746;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-service-form .admin-form-group small {
+  color: #8b968d;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.admin-service-file-name {
+  color: #286340 !important;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   VNS 4: SERVICES LIST PANEL
+======================================== */
+.admin-services-list-panel {
+  overflow: hidden;
+}
+
+.admin-services-list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.admin-services-count {
+  padding: 7px 11px;
+  border-radius: 20px;
+  background: #edf3eb;
+  color: #286340;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ========================================
+   VNS 5: SEARCH AND FILTER
+======================================== */
+.admin-services-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-services-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid #dfe6dd;
+  border-radius: 6px;
+  background: #fbfcfa;
+}
+
+.admin-services-search span {
+  color: #829087;
+  font-size: 20px;
+}
+
+.admin-services-search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #344b39;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.admin-services-toolbar select {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid #dfe6dd;
+  border-radius: 6px;
+  outline: none;
+  background: #fbfcfa;
+  color: #536658;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+/* ========================================
+   VNS 6: SERVICE ITEMS
+======================================== */
+.admin-services-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-service-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 19px 0;
+  border-top: 1px solid #edf0eb;
+}
+
+.admin-service-item-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #edf3eb;
+  color: #286340;
+  font-size: 23px;
+}
+
+.admin-service-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-service-item-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.admin-service-item-title h4 {
+  margin: 0;
+  color: #294832;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.admin-service-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.admin-service-status.is-published {
+  background: #eaf4ed;
+  color: #247347;
+}
+
+.admin-service-status.is-draft {
+  background: #f8f3e8;
+  color: #9a762f;
+}
+
+.admin-service-category {
+  display: block;
+  margin-top: 7px;
+  color: #718276;
+  font-size: 10px;
+}
+
+.admin-service-item-info p {
+  margin: 8px 0 0;
+  color: #89938b;
+  font-size: 11px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   VNS 7: SERVICE ACTIONS
+======================================== */
+.admin-service-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.admin-service-actions button {
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid #dfe6dd;
+  border-radius: 5px;
+  background: #fff;
+  color: #48604e;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-service-actions button:hover {
+  border-color: #39835d;
+  background: #f2f8f3;
+  color: #1d6042;
+}
+
+.admin-service-actions button.delete-action {
+  border-color: #f0dede;
+  color: #a34d4d;
+}
+
+.admin-service-actions button.delete-action:hover {
+  border-color: #dbaaaa;
+  background: #fff6f6;
+}
+
+/* ========================================
+   VNS 8: EMPTY STATE
+======================================== */
+.admin-services-empty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 260px;
+  padding: 30px 15px;
+  border-top: 1px solid #edf0eb;
+  text-align: center;
+}
+
+.admin-services-empty h3 {
+  margin: 17px 0 8px;
+  color: #294832;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+}
+
+.admin-services-empty p {
+  max-width: 370px;
+  margin: 0 0 19px;
+  color: #929b92;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   VNS 9: BACKEND CONNECTION NOTICE
+======================================== */
+.admin-services-notice {
+  margin: 15px 0 0;
+  color: #929b92;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   VNS 10: RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 850px) {
+  .admin-service-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .admin-service-item-info {
+    flex-basis: calc(100% - 65px);
+  }
+
+  .admin-service-actions {
+    width: 100%;
+    padding-left: 61px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-service-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .admin-service-stat-card {
+    min-height: 78px;
+  }
+
+  .admin-services-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-services-toolbar select {
+    width: 100%;
+  }
+
+  .admin-services-list-heading {
+    align-items: flex-start;
+  }
+
+  .admin-service-item {
+    gap: 12px;
+  }
+
+  .admin-service-actions {
+    padding-left: 0;
+  }
+
+  .admin-service-actions button {
+    flex: 1;
+  }
+}

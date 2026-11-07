@@ -1,0 +1,668 @@
+
+/* =========================================================
+   AGRIC X TRADING — EDITORIAL INSIGHTS
+========================================================= */
+
+.insights-page {
+  background: #fff;
+  color: #263b2d;
+}
+
+.insights-page a {
+  transition: color 0.2s ease;
+}
+
+/* 1. COMPACT EDITORIAL INTRODUCTION */
+
+.insights-masthead {
+  padding: 76px 0 65px;
+  background: #fff;
+  border-bottom: 1px solid #edf0eb;
+}
+
+.insights-masthead-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: end;
+  gap: 75px;
+}
+
+.insights-masthead .eyebrow {
+  margin-bottom: 17px;
+}
+
+.insights-masthead h1 {
+  max-width: 700px;
+  margin: 0;
+  color: #193b27;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.3rem, 4.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.insights-masthead h1 span {
+  color: #54815b;
+}
+
+.insights-masthead-content > p {
+  max-width: 475px;
+  margin: 0 0 5px;
+  color: #718074;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* 2. PUBLICATION LIBRARY */
+
+.insights-library {
+  padding: 65px 0 90px;
+  background: #f7f8f5;
+}
+
+.insights-library-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 27px;
+}
+
+.insights-library-heading .section-heading {
+  margin: 8px 0 7px;
+  color: #1c3928;
+  font-size: clamp(27px, 3vw, 36px);
+  line-height: 1.2;
+}
+
+.insights-results-count {
+  margin: 0;
+  color: #788479;
+  font-size: 12px;
+}
+
+.insights-search {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: min(100%, 350px);
+  min-height: 47px;
+  padding: 0 15px;
+  background: #fff;
+  border: 1px solid #e0e6dd;
+  border-radius: 3px;
+  color: #53745b;
+}
+
+.insights-search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #263b2d;
+  font: inherit;
+  font-size: 12px;
+}
+
+.insights-search input::placeholder {
+  color: #98a198;
+}
+
+/* 3. CATEGORY FILTERS */
+
+.insights-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 38px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #e0e6dd;
+}
+
+.insights-filters button {
+  padding: 9px 15px;
+  border: 1px solid #dce4d9;
+  border-radius: 3px;
+  background: #fff;
+  color: #536456;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.insights-filters button:hover,
+.insights-filters button.filter-active {
+  background: #205c3b;
+  border-color: #205c3b;
+  color: #fff;
+}
+
+/* 4. RESOURCE SECTION HEADING */
+
+.insights-unified-section {
+  margin-top: 0;
+}
+
+.insights-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 27px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #e0e6dd;
+}
+
+.insights-section-heading h3 {
+  margin: 8px 0 0;
+  color: #1d3928;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(21px, 2.4vw, 29px);
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.insights-section-heading p {
+  max-width: 560px;
+  margin: 9px 0 0;
+  color: #748075;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.insights-more-count {
+  flex-shrink: 0;
+  padding-bottom: 3px;
+  color: #7b877c;
+  font-size: 11px;
+}
+
+/* 5. EDITORIAL GRID */
+
+.insights-unified-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 23px;
+  align-items: stretch;
+}
+
+/* 6. RESOURCE CARDS */
+
+.insights-resource-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8ece6;
+}
+
+.insights-resource-image-link {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #e6ede4;
+  text-decoration: none;
+}
+
+.insights-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #e6ede4;
+}
+
+.insights-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.25s ease;
+}
+
+.insights-resource-image-link:hover .insights-image img {
+  opacity: 0.9;
+}
+
+.insights-image-placeholder {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 110px;
+  place-items: center;
+  background: linear-gradient(135deg, #e9efe6, #dce7d9);
+  color: #527653;
+}
+
+.insights-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(255 255 255 / 75%);
+  border-radius: 50%;
+  background: rgb(255 255 255 / 94%);
+  color: #205c3b;
+  box-shadow: 0 3px 13px rgb(0 0 0 / 13%);
+}
+
+/* 7. RESOURCE METADATA */
+
+.insights-resource-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  margin-bottom: 12px;
+}
+
+.insights-resource-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #37694a;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.insights-meta-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #879187;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.insights-resource-category svg,
+.insights-meta-detail svg {
+  flex-shrink: 0;
+}
+
+/* 8. CARD CONTENT */
+
+.insights-resource-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 19px 19px 21px;
+}
+
+.insights-resource-card h3 {
+  margin: 0 0 9px;
+  color: #203b2a;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.insights-resource-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.insights-resource-card h3 a:hover {
+  color: #39704b;
+}
+
+.insights-resource-description {
+  display: -webkit-box;
+  overflow: hidden;
+  margin: 0 0 17px;
+  color: #738075;
+  font-size: 11px;
+  line-height: 1.8;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.insights-resource-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  color: #286441;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.insights-resource-link:hover {
+  color: #a17a32;
+}
+
+/* 9. FEATURED PUBLICATION */
+
+.insights-resource-card-lead {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: stretch;
+  min-height: 330px;
+}
+
+.insights-resource-card-lead .insights-resource-image-link {
+  height: 100%;
+  min-height: 330px;
+  aspect-ratio: auto;
+}
+
+.insights-resource-card-lead .insights-resource-card-content {
+  justify-content: center;
+  padding: 35px 38px;
+}
+
+.insights-resource-card-lead h3 {
+  max-width: 530px;
+  margin-bottom: 13px;
+  font-size: clamp(22px, 2.5vw, 32px);
+  line-height: 1.3;
+}
+
+.insights-resource-card-lead .insights-resource-description {
+  max-width: 510px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  line-height: 1.85;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+.insights-resource-card-lead .insights-resource-category {
+  font-size: 10px;
+}
+
+/* 10. VIDEO CARDS */
+
+.insights-resource-card-video .insights-resource-image-link {
+  position: relative;
+  aspect-ratio: 5 / 3;
+}
+
+.insights-resource-card-video .insights-resource-card-content {
+  padding-top: 17px;
+}
+
+/* 11. LOADING, ERROR AND EMPTY STATES */
+
+.insights-no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 270px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #64806a;
+}
+
+.insights-no-results h3 {
+  margin: 15px 0 8px;
+  color: #24412e;
+  font-size: 19px;
+}
+
+.insights-no-results p {
+  max-width: 490px;
+  margin: 0;
+  color: #788478;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.insights-reset-button {
+  margin-top: 18px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 3px;
+  background: #205c3b;
+  color: #fff;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.insights-reset-button:hover {
+  background: #17472e;
+}
+
+/* 12. CONTACT CALL TO ACTION */
+
+.insights-cta {
+  padding: 65px 0;
+  background: #183f2a;
+  color: #fff;
+}
+
+.insights-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.insights-cta .eyebrow {
+  color: #d6bd7d;
+}
+
+.insights-cta h2 {
+  margin: 9px 0;
+  color: #fff;
+  font-size: clamp(24px, 2.8vw, 33px);
+  line-height: 1.25;
+}
+
+.insights-cta p {
+  max-width: 570px;
+  margin: 0;
+  color: rgb(255 255 255 / 76%);
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.insights-cta .primary-button {
+  flex-shrink: 0;
+}
+
+/* 13. TABLET */
+
+@media (max-width: 1000px) {
+  .insights-masthead-content {
+    gap: 40px;
+  }
+
+  .insights-unified-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px;
+  }
+
+  .insights-resource-card-lead {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .insights-resource-card-lead .insights-resource-image-link {
+    min-height: 280px;
+  }
+}
+
+/* 14. MOBILE */
+
+@media (max-width: 700px) {
+  .insights-masthead {
+    padding: 48px 0 43px;
+  }
+
+  .insights-masthead-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .insights-masthead .eyebrow {
+    margin-bottom: 13px;
+  }
+
+  .insights-masthead h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .insights-masthead-content > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .insights-library {
+    padding: 42px 0 60px;
+  }
+
+  .insights-library-heading {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .insights-search {
+    width: 100%;
+  }
+
+  .insights-filters {
+    gap: 7px;
+    margin-bottom: 29px;
+  }
+
+  .insights-filters button {
+    padding: 8px 11px;
+    font-size: 10px;
+  }
+
+  .insights-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .insights-unified-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .insights-resource-card-lead {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-resource-card-lead .insights-resource-image-link {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .insights-resource-card-lead .insights-resource-card-content {
+    padding: 20px;
+  }
+
+  .insights-resource-card-lead h3 {
+    font-size: 21px;
+  }
+
+  .insights-resource-card-lead .insights-resource-description {
+    font-size: 11px;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .insights-resource-card-content {
+    padding: 14px 13px 16px;
+  }
+
+  .insights-resource-card h3 {
+    font-size: 14px;
+  }
+
+  .insights-resource-description {
+    font-size: 10px;
+    line-height: 1.7;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .insights-resource-meta {
+    gap: 6px 8px;
+    margin-bottom: 9px;
+  }
+
+  .insights-resource-category,
+  .insights-meta-detail {
+    font-size: 8px;
+  }
+
+  .insights-resource-link {
+    font-size: 10px;
+  }
+
+  .insights-cta {
+    padding: 46px 0;
+  }
+
+  .insights-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* 15. SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .insights-unified-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .insights-resource-card-lead .insights-resource-card-content {
+    padding: 18px;
+  }
+
+  .insights-resource-card-lead h3 {
+    font-size: 20px;
+  }
+
+  .insights-resource-card:not(.insights-resource-card-lead)
+    .insights-resource-image-link {
+    aspect-ratio: 16 / 9;
+  }
+
+  .insights-resource-card-content {
+    padding: 16px 16px 18px;
+  }
+
+  .insights-resource-card h3 {
+    font-size: 16px;
+  }
+
+  .insights-resource-description {
+    font-size: 11px;
+  }
+
+  .insights-resource-category,
+  .insights-meta-detail {
+    font-size: 8.5px;
+  }
+}

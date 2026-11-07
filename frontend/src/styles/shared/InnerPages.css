@@ -1,0 +1,180 @@
+
+/* =========================================
+   SHARED INNER-PAGE STYLES
+========================================= */
+
+.inner-page {
+  min-height: 60vh;
+  background: white;
+}
+
+/* INNER-PAGE HERO */
+.page-hero {
+  position: relative;
+  padding: 105px 0 100px;
+  overflow: hidden;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(9, 35, 23, 0.96), rgba(9, 35, 23, 0.78)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
+      center / cover;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 22px;
+  color: #e1e8dc;
+}
+
+.page-hero h1 {
+  max-width: 780px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.06em;
+  font-weight: 800;
+}
+
+.page-hero p {
+  max-width: 650px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+/* INNER-PAGE CONTENT */
+.page-content {
+  padding: 85px 0;
+}
+
+.page-section-heading {
+  max-width: 750px;
+  margin-bottom: 45px;
+}
+
+.page-section-heading h2 {
+  color: var(--green-dark);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+
+.page-section-heading p {
+  margin-top: 17px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.85;
+}
+
+/* SHARED EYEBROW */
+.inner-page .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.inner-page .eyebrow > span {
+  width: 23px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* SHARED DETAIL PLACEHOLDER */
+.detail-placeholder {
+  display: flex;
+  align-items: center;
+  min-height: 55vh;
+  background: var(--surface);
+}
+
+.detail-placeholder-content {
+  text-align: center;
+}
+
+.detail-placeholder h1 {
+  color: var(--green-dark);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.detail-placeholder p {
+  margin: 15px 0 25px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.detail-placeholder .primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  color: white;
+  background: var(--green-dark);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* SHARED RESPONSIVE PAGE STYLES */
+@media (max-width: 900px) {
+  .about-intro-grid,
+  .research-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .values-grid,
+  .focus-grid,
+  .research-method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .page-hero {
+    padding: 80px 0;
+  }
+
+  .page-content {
+    padding: 65px 0;
+  }
+
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-intro-image img,
+  .about-intro-image img {
+    height: 330px;
+  }
+}
+
+@media (max-width: 560px) {
+  .values-grid,
+  .focus-grid,
+  .research-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .purpose-card {
+    padding: 30px 25px;
+  }
+
+  .value-card,
+  .focus-card,
+  .method-card {
+    padding: 27px 24px;
+  }
+}

@@ -1,0 +1,578 @@
+
+/* ========================================
+   VNS 1: MEDIA LIBRARY PAGE
+======================================== */
+
+.admin-media-page {
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 35px;
+  color: #24372b;
+}
+
+.admin-media-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.admin-media-header h1 {
+  margin: 8px 0;
+  color: #193c29;
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.admin-media-header p {
+  margin: 0;
+  color: #77847b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admin-media-upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 7px;
+  background: #1d6840;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-media-upload-button:hover {
+  background: #155331;
+}
+
+.admin-media-upload-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.admin-media-upload-button span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+/* ========================================
+   VNS 2: MEDIA STATUS NOTICES
+======================================== */
+
+.admin-media-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 15px 17px;
+  border: 1px solid #e9dcb7;
+  border-radius: 8px;
+  background: #fffaf0;
+}
+
+.admin-media-notice-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e9d7a8;
+  color: #70551a;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-media-notice strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #76591f;
+  font-size: 13px;
+}
+
+.admin-media-notice p {
+  margin: 0;
+  color: #87764f;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.admin-media-error,
+.admin-media-success {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.admin-media-error {
+  border: 1px solid #f0cccc;
+  background: #fff5f5;
+  color: #a33d3d;
+}
+
+.admin-media-success {
+  border: 1px solid #cfe6d4;
+  background: #f1faf3;
+  color: #286c43;
+}
+
+/* ========================================
+   VNS 3: STATISTICS
+======================================== */
+
+.admin-media-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 25px;
+}
+
+.admin-media-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e5ebe6;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.admin-media-stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #edf5ef;
+  color: #286c43;
+  font-size: 22px;
+}
+
+.admin-media-stat-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #7a877e;
+  font-size: 12px;
+}
+
+.admin-media-stat-card strong {
+  color: #203d2b;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+/* ========================================
+   VNS 4: MEDIA LIBRARY PANEL
+======================================== */
+
+.admin-media-library-panel {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #e5ebe6;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.admin-media-library-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.admin-media-library-heading h2 {
+  margin: 0 0 6px;
+  color: #254532;
+  font-size: 18px;
+}
+
+.admin-media-library-heading p {
+  margin: 0;
+  color: #89938c;
+  font-size: 12px;
+}
+
+.admin-media-total {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #edf5ef;
+  color: #286c43;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ========================================
+   VNS 5: SEARCH AND FILTERS
+======================================== */
+
+.admin-media-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 23px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edf0ed;
+}
+
+.admin-media-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.admin-media-filter {
+  padding: 8px 13px;
+  border: 1px solid #e1e8e2;
+  border-radius: 6px;
+  background: #fff;
+  color: #65756a;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.admin-media-filter.active {
+  border-color: #286c43;
+  background: #edf5ef;
+  color: #205c38;
+  font-weight: 700;
+}
+
+.admin-media-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 235px;
+  max-width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #e0e7e1;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.admin-media-search span {
+  color: #829087;
+  font-size: 20px;
+}
+
+.admin-media-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #344c3b;
+  font-size: 12px;
+}
+
+/* ========================================
+   VNS 6: MEDIA GRID AND CARDS
+======================================== */
+
+.admin-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.admin-media-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e5ebe6;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.admin-media-preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #edf1ed;
+}
+
+.admin-media-preview img,
+.admin-media-preview video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-media-preview video {
+  background: #17251c;
+}
+
+.admin-media-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: rgb(19 47 30 / 85%);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================
+   VNS 7: PDF PREVIEW
+======================================== */
+
+.admin-media-pdf-preview {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: #f5f7f4;
+  color: #a34d4d;
+  text-align: center;
+}
+
+.admin-media-pdf-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.admin-media-pdf-preview strong {
+  color: #34523d;
+  font-size: 13px;
+}
+
+.admin-media-pdf-preview a {
+  color: #286c43;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.admin-media-pdf-preview a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   VNS 8: CARD DETAILS AND ACTIONS
+======================================== */
+
+.admin-media-card-details {
+  padding: 13px;
+}
+
+.admin-media-card-details > strong {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 9px;
+  color: #314a38;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-media-file-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  overflow: hidden;
+  color: #89948c;
+  font-size: 10px;
+}
+
+.admin-media-file-info span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-media-delete-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 13px;
+  padding: 6px 9px;
+  border: 1px solid #f0dddd;
+  border-radius: 5px;
+  background: #fff;
+  color: #a34d4d;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.admin-media-delete-button:hover {
+  background: #fff4f4;
+}
+
+.admin-media-delete-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-media-delete-button span {
+  font-size: 16px;
+}
+
+/* ========================================
+   VNS 9: EMPTY AND LOADING STATES
+======================================== */
+
+.admin-media-empty-state {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.admin-media-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: #edf5ef;
+  color: #39734e;
+  font-size: 27px;
+}
+
+.admin-media-empty-state h3 {
+  margin: 0 0 8px;
+  color: #34523d;
+  font-size: 16px;
+}
+
+.admin-media-empty-state p {
+  max-width: 370px;
+  margin: 0 0 18px;
+  color: #89938c;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   VNS 10: UPLOAD GUIDELINES
+======================================== */
+
+.admin-media-guidelines {
+  margin-top: 23px;
+  padding: 19px 21px;
+  border: 1px solid #e5ebe6;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.admin-media-guidelines h3 {
+  margin: 0 0 15px;
+  color: #34523d;
+  font-size: 14px;
+}
+
+.admin-media-guidelines > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-media-guidelines > div span {
+  min-width: 55px;
+  color: #42644c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-media-guidelines > div p {
+  margin: 0;
+  color: #849087;
+  font-size: 11px;
+}
+
+.admin-media-guideline-footnote {
+  margin: 14px 0 0;
+  color: #9a8a63;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   VNS 11: RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1100px) {
+  .admin-media-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .admin-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-media-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-media-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-media-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .admin-media-stat-card {
+    padding: 15px;
+  }
+
+  .admin-media-library-panel {
+    padding: 16px;
+  }
+
+  .admin-media-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-media-search {
+    width: 100%;
+  }
+
+  .admin-media-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-media-library-heading {
+    align-items: flex-start;
+  }
+}

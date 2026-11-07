@@ -1,0 +1,450 @@
+
+/* ========================================
+   VNS 1: MAIN EDITOR CONTAINER
+======================================== */
+.article-editor-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  border: 1px solid #dce5dd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(20 55 37 / 3%);
+}
+
+/* ========================================
+   VNS 2: VISUAL / HTML MODE BAR
+======================================== */
+.article-editor-mode-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8ede8;
+  background: #f8faf8;
+}
+
+.article-editor-mode-tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.article-editor-mode-tabs button {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 8px 15px;
+  background: transparent;
+  color: #78877e;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.article-editor-mode-tabs button.active {
+  border-color: #dce8df;
+  background: #fff;
+  color: #1d6042;
+}
+
+.article-editor-mode-description {
+  color: #829087;
+  font-size: 11px;
+}
+
+/* ========================================
+   VNS 3: STICKY EDITOR CONTROL AREA
+======================================== */
+.article-editor-sticky-area {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  box-shadow: 0 3px 10px rgb(20 55 37 / 7%);
+}
+
+/* ========================================
+   VNS 4: FORMATTING TOOLBAR
+======================================== */
+.article-editor-toolbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e8ede8;
+  background: #fff;
+}
+
+.article-toolbar-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.article-toolbar-btn,
+.article-editor-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  min-width: 34px;
+  padding: 7px 10px;
+  border: 1px solid #e0e7e1;
+  border-radius: 6px;
+  background: #fff;
+  color: #43594b;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.article-toolbar-btn:hover,
+.article-editor-upload:hover {
+  border-color: #39835d;
+  background: #f2f8f3;
+  color: #1d6042;
+}
+
+.article-toolbar-btn.is-active {
+  border-color: #39835d;
+  background: #eaf3ec;
+  color: #1d6042;
+}
+
+.article-toolbar-btn:disabled,
+.article-editor-upload:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.article-toolbar-divider {
+  width: 1px;
+  height: 25px;
+  background: #e5ebe6;
+}
+
+/* ========================================
+   VNS 5: MEDIA CAPTION PANEL
+======================================== */
+.article-media-caption-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 15px 17px;
+  border-bottom: 1px solid #dce9df;
+  background: #f0f7f1;
+}
+
+.article-media-caption-panel > strong {
+  color: #1d6042;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.article-media-caption-panel > p {
+  margin: 0;
+  color: #687b6e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.article-media-caption-panel label {
+  color: #344f3d;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.article-media-caption-panel textarea {
+  display: block;
+  width: 100%;
+  min-height: 75px;
+  box-sizing: border-box;
+  resize: vertical;
+  border: 1px solid #d3e0d5;
+  border-radius: 7px;
+  padding: 11px 12px;
+  outline: none;
+  background: #fff;
+  color: #344b3d;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-media-caption-panel textarea:focus {
+  border-color: #39835d;
+  box-shadow: 0 0 0 3px rgb(57 131 93 / 10%);
+}
+
+.article-media-caption-panel textarea::placeholder {
+  color: #9aa69d;
+}
+
+.article-media-caption-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.article-media-caption-actions button {
+  min-height: 35px;
+  border: 1px solid #1d6042;
+  border-radius: 6px;
+  padding: 8px 15px;
+  background: #1d6042;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.article-media-caption-actions button:hover {
+  background: #164b33;
+}
+
+.article-media-caption-actions button:last-child {
+  border-color: #d6e1d8;
+  background: #fff;
+  color: #53675a;
+}
+
+.article-media-caption-actions button:last-child:hover {
+  border-color: #a9bdae;
+  background: #f7faf7;
+}
+
+/* ========================================
+   VNS 6: LINK INPUT
+======================================== */
+.article-editor-link-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #e8ede8;
+  background: #f8faf8;
+}
+
+.article-editor-link-input input {
+  flex: 1;
+  min-width: 180px;
+  border: 1px solid #dce5dd;
+  border-radius: 6px;
+  padding: 10px 12px;
+  outline: none;
+  font-size: 12px;
+}
+
+.article-editor-link-input button {
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 13px;
+  background: #1d6042;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ========================================
+   VNS 7: EDITOR CANVAS
+======================================== */
+.article-editor-canvas {
+  position: relative;
+  min-height: 430px;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.article-editor-content {
+  min-height: 380px;
+  outline: none;
+  color: #344b3d;
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.article-editor-content p {
+  margin: 0 0 17px;
+}
+
+.article-editor-content p.is-editor-empty:first-child::before {
+  color: #a0aaa2;
+  content: "Start writing your article here...";
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.article-editor-content h1 {
+  margin: 28px 0 17px;
+  color: #18372b;
+  font-size: 30px;
+  line-height: 1.35;
+}
+
+.article-editor-content h2 {
+  margin: 27px 0 14px;
+  color: #18372b;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.article-editor-content h3 {
+  margin: 23px 0 12px;
+  color: #244b36;
+  font-size: 19px;
+}
+
+.article-editor-content ul,
+.article-editor-content ol {
+  margin: 14px 0 20px;
+  padding-left: 27px;
+}
+
+.article-editor-content li {
+  margin-bottom: 7px;
+}
+
+.article-editor-content blockquote {
+  margin: 22px 0;
+  border-left: 4px solid #b4934d;
+  padding: 13px 20px;
+  background: #faf8f1;
+  color: #65746a;
+  font-style: italic;
+}
+
+.article-editor-content a {
+  color: #26724b;
+  text-decoration: underline;
+}
+
+.article-editor-content hr {
+  margin: 25px 0;
+  border: 0;
+  border-top: 1px solid #e2e9e3;
+}
+
+/* ========================================
+   VNS 8: IMAGES AND VIDEO
+======================================== */
+.article-editor-content figure.article-inline-image {
+  margin: 22px 0;
+}
+
+.article-editor-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.article-editor-content .article-video-block {
+  margin: 24px 0;
+}
+
+.article-editor-content video {
+  display: block;
+  width: 100%;
+  max-height: 480px;
+  border-radius: 8px;
+  background: #111;
+}
+
+.article-editor-content figcaption {
+  margin-top: 8px;
+  color: #78877e;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ========================================
+   VNS 9: HTML SOURCE EDITOR
+======================================== */
+.article-editor-html {
+  display: block;
+  width: 100%;
+  min-height: 430px;
+  box-sizing: border-box;
+  resize: vertical;
+  border: 0;
+  outline: none;
+  padding: 24px;
+  background: #17251d;
+  color: #d9eadc;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  tab-size: 2;
+}
+
+/* ========================================
+   VNS 10: EDITOR FOOTER
+======================================== */
+.article-editor-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 11px 15px;
+  border-top: 1px solid #e8ede8;
+  background: #f8faf8;
+  color: #829087;
+  font-size: 10px;
+}
+
+/* ========================================
+   VNS 11: RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 700px) {
+  .article-editor-canvas {
+    min-height: 350px;
+    padding: 18px 15px;
+  }
+
+  .article-editor-content {
+    min-height: 310px;
+    font-size: 14px;
+  }
+
+  .article-editor-content h1 {
+    font-size: 25px;
+  }
+
+  .article-editor-content h2 {
+    font-size: 21px;
+  }
+
+  .article-editor-toolbar {
+    gap: 6px;
+    padding: 9px;
+  }
+
+  .article-toolbar-divider {
+    display: none;
+  }
+
+  .article-media-caption-panel {
+    padding: 12px;
+  }
+
+  .article-editor-footer {
+    flex-direction: column;
+  }
+}

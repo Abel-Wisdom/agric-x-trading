@@ -1,0 +1,310 @@
+/* ========================================
+   VNS 1: SETTINGS PAGE
+======================================== */
+
+.admin-settings-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.admin-settings-header {
+  margin-bottom: 28px;
+}
+
+.admin-settings-eyebrow {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: #8b9b58;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.admin-settings-header h1 {
+  margin: 0;
+  color: #193b2b;
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.admin-settings-header p {
+  margin: 8px 0 0;
+  color: #7b887f;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   VNS 2: SETTINGS CARDS
+======================================== */
+
+.admin-settings-card {
+  margin-bottom: 22px;
+  padding: 25px;
+  border: 1px solid #e1e9e2;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(20 55 37 / 3%);
+}
+
+.admin-settings-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.admin-settings-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eff5ed;
+  font-size: 19px;
+}
+
+.admin-settings-card-heading h2 {
+  margin: 0;
+  color: #234331;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.admin-settings-card-heading p {
+  margin: 5px 0 0;
+  color: #829087;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   VNS 3: FORM FIELDS
+======================================== */
+
+.admin-settings-form-grid,
+.admin-settings-password-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.admin-settings-password-grid {
+  grid-template-columns: 1fr;
+  max-width: 620px;
+}
+
+.admin-settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-settings-field label {
+  color: #405448;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-settings-field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 13px;
+  border: 1px solid #dce5dd;
+  border-radius: 7px;
+  outline: none;
+  background: #fff;
+  color: #304638;
+  font-family: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s ease;
+}
+
+.admin-settings-field input:focus {
+  border-color: #648b54;
+}
+
+.admin-settings-field input::placeholder {
+  color: #a6b0a8;
+}
+
+/* ========================================
+   VNS 4: BUTTONS AND NOTICES
+======================================== */
+
+.admin-settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.admin-settings-primary-button {
+  min-height: 41px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 7px;
+  background: #28583b;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-settings-primary-button:hover {
+  background: #1d442d;
+}
+
+.admin-settings-notice {
+  margin-top: 17px;
+  padding: 12px 14px;
+  border: 1px solid #e4dfc4;
+  border-radius: 7px;
+  background: #faf8ee;
+  color: #756a3e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.admin-settings-hint {
+  margin: 12px 0 0;
+  color: #89958c;
+  font-size: 11px;
+}
+
+/* ========================================
+   VNS 5: WEBSITE INFORMATION
+======================================== */
+
+.admin-settings-info-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-settings-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 0;
+  border-top: 1px solid #edf1ed;
+}
+
+.admin-settings-info-row:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.admin-settings-info-row:last-child {
+  padding-bottom: 0;
+}
+
+.admin-settings-info-row h3 {
+  margin: 0;
+  color: #344c3c;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-settings-info-row p {
+  margin: 5px 0 0;
+  color: #87938a;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.admin-settings-status,
+.admin-settings-pending {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.admin-settings-status {
+  background: #edf5ed;
+  color: #47754d;
+}
+
+.admin-settings-pending {
+  background: #f8f3e7;
+  color: #967a39;
+}
+
+/* ========================================
+   VNS 6: SESSION INFORMATION
+======================================== */
+
+.admin-settings-session-card {
+  background: #fbfdfb;
+}
+
+.admin-settings-session-card .admin-settings-card-heading {
+  margin-bottom: 17px;
+}
+
+.admin-settings-session-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #47754d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-settings-session-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4c9a58;
+}
+
+.admin-settings-session-note {
+  margin: 12px 0 0;
+  color: #849087;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   VNS 7: RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 650px) {
+  .admin-settings-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-settings-card {
+    padding: 19px;
+  }
+
+  .admin-settings-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-settings-info-row {
+    align-items: flex-start;
+  }
+
+  .admin-settings-primary-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .admin-settings-card-heading {
+    align-items: flex-start;
+  }
+
+  .admin-settings-info-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
