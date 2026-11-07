@@ -1,27 +1,25 @@
-// ========================================
-// VNS 1: IMPORTS
-// Admin login page and its required styles.
-// ========================================
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/AdminLogin.css";
 
+// Use the deployed Render API in production and localhost during development.
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.DEV
+    ? "http://localhost:8000/api"
+    : "https://agric-x-trading-api.onrender.com/api");
+
 export default function AdminLogin() {
   const navigate = useNavigate();
 
-  // Form input states
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // UI states
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // ========================================
-  // VNS 2: HANDLE ADMIN LOGIN
-  // Sends credentials to the backend API.
-  // ========================================
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
@@ -34,19 +32,16 @@ export default function AdminLogin() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "http://localhost:8000/api/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: email.trim(),
-            password,
-          }),
-        }
-      );
+      const response = await fetch(`${API_URL}/auth/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          password,
+        }),
+      });
 
       const data = await response.json();
 
@@ -73,9 +68,6 @@ export default function AdminLogin() {
     }
   };
 
-  // ========================================
-  // VNS 3: LOGIN PAGE UI
-  // ========================================
   return (
     <main className="admin-login-page">
       <div className="admin-login-background" />
